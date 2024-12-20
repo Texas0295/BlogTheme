@@ -1,19 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 html{
     font-family: 'Cascadia Code', Consolas, Helvetica, 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
 }
 
 body {
-    padding: 0;
-    margin: 0;
     justify-content: center;
     flex-direction: column;
     display: flex;
     height: 200vh;
-}
-
-p,h1{
-    padding: 0%;
-    margin: 0%;
 }
 
 .welcome{
@@ -52,6 +50,7 @@ p,h1{
 }
 
 .info{
+    display: flex;
     flex-direction: column;
     text-align: center;
     background: #fff;
@@ -62,9 +61,10 @@ p,h1{
 }
 
 .info img{
-    padding: 0;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     height: 180px;
     width: auto; 
     border-radius: 50%;
@@ -151,7 +151,65 @@ p,h1{
     height: 70%;
 }
 
+.info-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .main-quote{
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 5px;
 }
+
+@media (max-width: 1023px) {
+    .main-container{
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .info{
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-right: 20px;
+        width: auto;
+    }
+
+    .info-content {
+        flex-direction: row;
+    }
+
+    .social{
+        justify-self: flex-end;
+    }
+
+    .article-container{
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .basic {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 70%;
+    }
+
+    .basic img {
+        align-self: flex-start;
+    }
+
+    .basic p {
+        align-self: flex-start;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
