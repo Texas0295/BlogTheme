@@ -8,9 +8,6 @@ html{
 }
 
 body {
-    justify-content: center;
-    flex-direction: column;
-    display: flex;
     height: 200vh;
     gap: 50px;
 }
@@ -45,6 +42,7 @@ body {
 }
 
 .main{
+    background: url("/resources/site_img/bkg.png") center center / cover no-repeat;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -53,6 +51,8 @@ body {
 .main-container{
     display: flex;
     justify-content: center;
+    background: rgba(0,0,0,0);
+    margin-top: 20px;
     gap: 20px;
     height: 90%;
 }
@@ -61,10 +61,11 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background: #fff;
     width: 250px;
     margin-left: 20px;
     border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
@@ -83,30 +84,41 @@ body {
 }
 
 .article-container{
+    height: 100%;
+    display: flex;
     flex-direction: column;
     width: 60vw;
-    background: rgba(0,0,0,0,067);
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-    border: 1px solid #fff;
-    overflow-y: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.article-container::-webkit-scrollbar{
-    display: none;
 }
 
 .article-container h1{
     margin-top: 20px;
-    justify-self: center;
+    align-self: center;
+}
+
+.article-cards{
+    display: flex;
+    height: 100%;
+    border-radius: 20px;
+    flex-direction: column;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    backdrop-filter: blur(5px);
+}
+
+.article-cards::-webkit-scrollbar{
+    display: none;
 }
 
 .article-card{
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur();
     word-break: normal;
     word-wrap: break-word;
     margin-left: 10px;
@@ -178,6 +190,7 @@ body {
 }
 
 @media (max-width: 1023px) {
+
     .main-container{
         flex-direction: column;
     }
@@ -199,6 +212,7 @@ body {
 
     .article-container{
         width: auto;
+        height: 62%;
         margin-left: 20px;
         margin-right: 20px;
     }
