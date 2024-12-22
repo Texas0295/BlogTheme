@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     display: flex;
     height: 200vh;
+    gap: 50px;
 }
 
 .welcome{
@@ -43,10 +44,17 @@ body {
     to { border-color: black; }
 }
 
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 .main-container{
     display: flex;
     justify-content: center;
     gap: 20px;
+    height: 90%;
 }
 
 .info{
@@ -76,12 +84,18 @@ body {
 
 .article-container{
     flex-direction: column;
-    height: 80vh;
     width: 60vw;
     background: rgba(0,0,0,0,067);
     border-radius: 20px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
     border: 1px solid #fff;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.article-container::-webkit-scrollbar{
+    display: none;
 }
 
 .article-container h1{
@@ -166,7 +180,6 @@ body {
 @media (max-width: 1023px) {
     .main-container{
         flex-direction: column;
-        height: 100vh;
     }
 
     .info{
